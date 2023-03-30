@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+html{
+    scroll-behavior: smooth;
+} 
+:root{
+    --black     :#222222;
+    --superblack:#000000;
+    --darkblue  :#145272;
+    --darkblue2 :#031120;
+    --lightblue :#F1F5F8;
+    --gray      :#5A5A5A;
+    --lightgray :#F5F5F5;
+    --white     :#FFFFFF;
+
+    --main-font: 'Plus Jakarta Sans';
+}
+body{
+    font-family: var(--main-font);
+    background-color: var(--white);
+    overflow-x: hidden;
+    min-height: 100%;
+}
+*{ 
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+/* ==================== sign up ===================== */
+.image-logo{
+    /* background-image: url('../Assets/Schedule/bli\ management.svg'); */
+    width: 192px;
+    height: 60px;
+    margin-left: 80px;
+    margin-top: 20px;
+}
+.main-content{
+    display: flex;
+    justify-content: space-around;
+}
+
+/* left */
+.main-content .left-section{
+    margin-top: 100px;
+    width: 423px;
+    height: 695px;
+}
+.left-section .title{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: var(--darkblue);
+}
+.left-section .sub-title{
+    margin-top: 3px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--gray);
+}
+.left-section form{
+    margin-top: 20px;
+}
+.left-section label{
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    color: var(--black);
+}
+.form-input option{
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 28px;
+    color: var(--black);  
+}
+.left-section input{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 20px;
+    width: 424px;
+    height: 40px;
+    background-color: var(--lightgray);
+    border-radius: 10px;
+    border: none;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 25px;
+    color: var(--gray);
+}
+.Form-Status select{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 20px;
+    width: 424px;
+    height: 40px;
+    background-color: var(--lightgray);
+    border-radius: 10px;
+    border: none;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 25px;
+    color: var(--gray);
+}
+.space20{
+    margin-top: 20px;
+}
+
+
+.terms-condition, .remember-me{
+    margin-left: 0;
+    /* display: flex;
+    justify-content: space-around; */
+    width: 300px;
+}
+.terms-condition input, .remember-me input{
+    margin-right: 5px;
+    width: 13px;
+    height: 13px;
+}
+.terms-condition label, .remember-me label{
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--black);
+}
+.terms-condition a, .remember-me a{
+    margin-left: 0;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--darkblue);
+}
+
+
+.create-account{
+    margin-top: 60px;
+    width: 423px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--white);
+    background-color: var(--darkblue);
+    border: 2px solid var(--darkblue);
+    border-radius: 20px;
+    transition: 0.3s;
+}
+.create-account:hover{
+    color: var(--darkblue);
+    background-color: var(--white);
+    border: 2px solid var(--darkblue); 
+}
+
+.left-section .log-in{
+    /* display: flex;
+    justify-content: center; */
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--black);
+}
+.left-section .log-in .login-button{
+    margin-left: 0px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 18px;
+    color: var(--darkblue);
+}
+
+/* right */
+.right-section{
+    margin-top: 25px;
+    width: 696px;
+    height: 910px;
+    border-radius: 25px 0 0 0;
+    background-color: var(--darblue);
+    margin-right: 0;
+    background-image: url(../Assets/SignUpLogIn/building.svg);
+}
+.right-section .text{
+    width: 320px;
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 60px;
+    color: var(--white);
+    margin-left: 55px;
+    margin-top: 55px;
+}
+
+/* Mobile Display */
+@media screen and (max-width: 1200px) and (min-width: 412px) { 
+    .main-content{
+        display: flex;
+    }
+    .image-logo{
+        /* display: flex; */
+        margin-left: 5%;
+    }
+    .right-section{
+        display: none;
+    }
+}
+
+

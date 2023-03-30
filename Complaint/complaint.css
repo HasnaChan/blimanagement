@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --black     :#222222;
+    --superblack:#000000;
+    --darkblue  :#145272;
+    --darkblue2 :#031120;
+    --lightblue :#F1F5F8;
+    --gray      :#A0A1A8;
+    --whitegray :#F5F5F5;
+    --white     :#FFFFFF;
+
+    --main-font: 'Plus Jakarta Sans';
+}
+body{
+    font-family: var(--main-font);
+    background-color: var(--lightblue);
+    overflow-x: hidden;
+    min-height: 100%;
+}
+*{ 
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+/* ================================================= */
+.responsive-bar{
+    display: none;
+}
+#hamburger-button{
+    display: none;
+}
+#cross-button{
+    display: none;
+}
+
+.logout{
+    background-color: var(--darkblue);
+    text-decoration: none;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+.logout a{
+    font-size: 20px;
+    color: var(--white);
+}
+.logout:hover{
+    opacity: 0.9;
+}
+
+.bg{
+    background-color: var(--white);
+}
+.navbar{
+    height: 100px;
+    padding-top: 20px;
+}
+
+.navbar .nav-wrapper{
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    margin-top: 0;
+}
+.nav-wrapper .menu-wrapper{
+    margin-left: 0;
+    display: flex;
+    gap: 3.4722222222222223vw;
+}
+.nav-wrapper .menu-wrapper .menu{
+    display: flex;
+    align-items: center;
+    gap: 4.861111111111112vw;
+}
+.menu-wrapper .menu .menu-link{
+    font-size: 20px;
+    color: var(--black);
+    font-family: var(--main-font);
+    font-weight: 400;
+}
+.menu-wrapper .menu li a:hover{
+    color: var(--darkblue);
+    /* transition: width 0.2s ease-out; */
+}
+.menu .menu-item, .menu-home{
+    position: relative;
+    padding-bottom: 7px;
+    cursor: pointer;
+}
+.menu .menu-item::after, .menu-home::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 0%;
+    height: 4px;
+    background-color: var(--darkblue);
+    transition: width 0.2s ease-out;
+    border-radius: 5px;
+}
+.menu-item:hover.menu-item::after{
+    width: 25%;
+}
+.menu-home:hover.menu-home::after{
+    width: 100%;
+}
+.menu-item:hover.menu-item::after .active{
+    width: 25%;
+}
+.menu-home:hover.menu-home::after .active{
+    width: 100%;
+}
+
+/* ============= Complaint Form ================== */
+.space50{
+    margin-top: 50px;
+}
+.complaint-form{
+    padding-left: 100px;
+    padding-right: 100px;
+    margin-left: 80px;
+    margin-bottom: 50px;
+    width: 783px;
+    height: 850px;
+    background-color: var(--white);
+    border-radius: 50px;
+    border: 1px solid #878E97;
+}
+.complaint-form .title{
+    margin-top: 43px;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: var(--darkblue);
+}
+.complaint-form .subtitle{
+    margin-top: 7px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--gray);
+}
+.complaint-form .forms{
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.space50{
+    margin-top: 40px;
+}
+.complaint-form .forms label{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    color: var(--black);
+}
+.complaint-form .forms .form-input{
+    resize: none;
+    margin-top: 20px;
+    margin-left: 0;
+    background-color: var(--whitegray);
+    width: 90%;
+    height: 40px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #5A5A5A;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 25px;
+    border: none;
+    padding-left: 15px;
+}
+.complaint-form .forms .form-input-{
+    resize: none;
+    margin-top: 20px;
+    margin-left: 0;
+    background-color: var(--whitegray);
+    width: 90%;
+    height: 200px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #5A5A5A;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 25px;
+    border: none;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+textarea{
+    font-family: var(--main-font);
+    color: #5A5A5A;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 25px;
+}
+/* .complaint-form .forms{
+    margin-top: 20px;
+    margin-left: 80px;
+    margin-right: 60px;
+}
+.space50{
+    margin-top: 40px;
+}
+.forms label{
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    color: var(--black);
+}
+.forms .form-input{
+    margin-top: 20px;
+    margin-left: 0;
+    background-color: var(--whitegray);
+    width: 350px;
+    height: 40px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: var(--gray);
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 25px;
+    
+}
+.forms .form-input-{
+    margin-top: 20px;
+    margin-left: 0;
+    background-color: var(--whitegray);
+    width: 350px;
+    height: 300px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: var(--gray);
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 25px;
+}
+.form-input input, .form-input- input{
+    margin-top: 6px;
+    margin-left: 20px;
+    text-decoration: none;
+    background: none;
+    border: none;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 25px;
+    color: var(--gray);
+} */
+
+.submit-button{
+    background-color: var(--darkblue);
+    border: none;
+    border-radius: 20px;
+    margin-top: 70px;
+    padding: 10px 60px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--white);
+    transition: 0.3s;
+}
+.submit-button:hover{
+    background-color: var(--white);
+    color: var(--darkblue);
+    border: 2px solid var(--darkblue);
+}
+
+.access-complaint{
+    transform: rotate(270deg);
+    right: -70px;
+    bottom: 90px;
+    position: fixed;
+    z-index: 1;
+    width: 170px;
+    height: 30px;
+    background-color: var(--darkblue);
+    border-radius: 10px 10px 0 0;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--white);
+    border: 2px solid var(--darkblue);
+    transition: 0.5s;
+    cursor: pointer;
+}
+.access-complaint:hover{
+    background-color: var(--white);
+    color: var(--darkblue);
+    border: 2px solid var(--darkblue);
+}
+
+/* .logo-bca{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    bottom: 0px;
+    z-index: -1;
+} */
+
+.logo-bca{
+    position:fixed;
+    right: 0px;
+    bottom: 0px;
+    z-index: -1;
+}
+
+@media screen and (max-width: 1200px) and (min-width: 312px) { 
+    .nav-wrapper .menu-wrapper .menu{
+        display: none;
+    }   
+
+    .responsive-bar{
+        z-index: 2;
+        display: none;
+        position: fixed;
+        bottom: 0;
+        flex-direction: column;
+        background-color: #002334;
+        width: 100%;
+        height: 500px;
+        border-radius: 40px 40px 0 0;
+    }
+    .responsive-subbar{
+        padding: 10px;
+        color: var(--white);
+        width: fit-content;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        border-radius: 15px;
+        /* background-color: var(--white); */
+        transition: 0.3s;
+    }
+    .responsive-subbar:hover{
+        background-color: #80919A;
+        border-radius: 15px;
+    }
+    .responsive-bar .line{
+        border-radius: 0.5px;
+        width: 70%;
+        height: 1px;
+        background-color: var(--white);   
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .responsive-bar img{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+    }
+        #hamburger-button{
+        cursor: pointer;
+        width: 30px;
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 6px;
+    }
+    #hamburger-button div{
+        background-color: #004567;
+        width: 25px;
+        height: 2.5px;
+        border-radius: 10px;
+    }
+    #cross-button{
+        cursor: pointer;
+        width: 30px;
+        display: none;
+        /* margin: auto; */
+    }
+    #cross-button .satu{
+        background-color: #004567;
+        width: 40px;
+        height: 2.5px;
+        border-radius: 10px;
+        transform: rotate(45deg);
+    }
+    #cross-button .dua{
+        background-color: #004567;
+        width: 40px;
+        height: 2.5px;
+        border-radius: 10px;
+        transform: rotate(-45deg);
+    }
+
+    .nav-wrapper .menu-wrapper .menu{
+        display: none;
+    }
+
+    .complaint-form{
+        padding-left: 75px;
+        padding-right: 75px;
+        margin: auto;
+        width: 90%;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+    .complaint-form .title{
+        font-size: 36px;
+        line-height: 50px;
+        color: var(--darkblue);
+    }
+    .complaint-form .subtitle{
+        font-size: 14px;
+    }
+    .complaint-form .forms label{
+        font-size: 20px;
+    }
+    .submit-button{
+        padding: 7px 50px;
+        font-size: 16px;
+    }
+    .access-complaint{
+        font-size: 14px;
+    }}

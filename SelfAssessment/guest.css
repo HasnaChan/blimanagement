@@ -1,0 +1,410 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html{
+    scroll-behavior: smooth;
+}
+:root{
+    --black     :#222222;
+    --superblack:#000000;
+    --darkblue  :#145272;
+    --darkblue2 :#031120;
+    --lightblue :#F1F5F8;
+    --gray      :#5A5A5A;
+    --whitegray :#F5F5F5;
+    --white     :#FFFFFF;
+
+    --main-font: 'Plus Jakarta Sans';
+}
+body{
+    font-family: var(--main-font);
+    background-color: var(--white);
+    overflow-x: hidden;
+    min-height: 100%;
+}
+*{ 
+    margin: auto;
+    padding: auto;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+/* ================================================= */
+.responsive-bar{
+    display: none;
+}
+#hamburger-button{
+    display: none;
+}
+#cross-button{
+    display: none;
+}
+
+.logout{
+    background-color: var(--darkblue);
+    text-decoration: none;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 15px;
+    transition: 0.3s;
+}
+.logout a{
+    font-size: 20px;
+    color: var(--white);
+}
+.logout:hover{
+    opacity: 0.9;
+}
+
+.bg{
+    background-color: var(--white);
+}
+.navbar{
+    height: 100px;
+    padding-top: 20px;
+}
+
+.navbar .nav-wrapper{
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo{
+    margin-top: 0;
+}
+.nav-wrapper .menu-wrapper{
+    margin-left: 0;
+    display: flex;
+    gap: 3.4722222222222223vw;
+}
+.nav-wrapper .menu-wrapper .menu{
+    display: flex;
+    align-items: center;
+    gap: 4.861111111111112vw;
+}
+.menu-wrapper .menu .menu-link{
+    font-size: 20px;
+    color: var(--black);
+    font-family: var(--main-font);
+    font-weight: 400;
+}
+.menu-wrapper .menu li a:hover{
+    color: var(--darkblue);
+    /* transition: width 0.2s ease-out; */
+}
+.menu .menu-item, .menu-home{
+    position: relative;
+    padding-bottom: 7px;
+    cursor: pointer;
+}
+.menu .menu-item::after, .menu-home::after{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 0%;
+    height: 4px;
+    background-color: var(--darkblue);
+    transition: width 0.2s ease-out;
+    border-radius: 5px;
+}
+.menu-item:hover.menu-item::after{
+    width: 25%;
+}
+.menu-home:hover.menu-home::after{
+    width: 100%;
+}
+.menu-item:hover.menu-item::after .active{
+    width: 25%;
+}
+.menu-home:hover.menu-home::after .active{
+    width: 100%;
+}
+
+/* ================== Self Assessment Form =================== */
+.contents{
+    display: flex;
+    /* background-color: #000000; */
+    justify-content:space-between;
+    padding-left: 140px;
+}
+.self-assessment-form{
+    /* background-color: aqua; */
+    margin-top: 100px;
+    margin-left: 0;
+    width: 325px;
+}
+.self-assessment-form .head{
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    color: var(--darkblue);
+}
+.self-assessment-form .subhead{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--gray);    
+}
+
+.contents .button-options{
+    margin-left: 0;
+    width: 305px;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 18px;
+}
+.button-options .left{
+    width: 152px;
+    height: 40px;
+    margin-left: 0;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--darkblue);
+    background-color: var(--white);
+    border: 1px solid  var(--darkblue);
+    border-radius: 10px 0 0 10px;
+    transition: 0.5s;
+}
+.button-options .right{
+    width: 152px;
+    height: 40px;
+    margin-left: -2px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--white);
+    background-color: var(--darkblue);
+    border: 1px solid  var(--darkblue);
+    border-radius: 0 10px 10px 0;
+    transition: 0.5s;
+}
+.button-options .left:hover{
+    color: var(--white);
+    background-color: var(--darkblue);
+}
+
+.space30{
+    margin-top: 30px;
+}
+.add-schedule-form .forms{
+    margin-top: 30px;
+    margin-left: 80px;
+    margin-right: 60px;
+}
+.forms label{
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 30px;
+    color: var(--black);
+}
+.forms .form-input{
+    display: n;
+    margin-top: 20px;
+    margin-left: 0;
+    background-color: var(--whitegray);
+    width: 320px;
+    height: 40px;
+    border-radius: 10px;
+    text-decoration: none;
+    border: none;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 25px;
+    color: var(--gray);
+    padding-left: 15px;
+    padding-right: 10px;
+}
+
+.forms .form-input input, .forms .form-input select{
+    width: 290px;
+    margin-top: 7px;
+    margin-left: 20px;
+}
+
+/* ================== Self Assessment Questions =================== */
+.self-assessment-questions{
+    width: 781px;
+    /* background-color: red; */
+}
+.self-assessment-questions .scroll-bg{
+    background: var(--darkblue);
+    width: 781px;
+    height: 820px;
+    margin: 10% auto;
+    padding: 10px;
+    border-radius: 25px;
+}
+.self-assessment-questions .scroll-div{
+    width: 760px;
+    height: 707px;    
+    background: var(--darkblue);
+    overflow: hidden;
+    overflow-y: scroll;
+    border-radius: 15px;
+}
+.self-assessment-questions .scroll-object{
+    border-radius: 15px;
+    background-color: var(--white);
+    padding: 30px 50px;
+}
+.self-assessment-questions .assessment-questions{
+    margin-bottom: 15px;
+}
+.self-assessment-questions .scroll-bg .submit{
+    padding: 10px 60px;
+    background-color: var(--white);
+    border-radius: 20px;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 30px;
+    color: var(--darkblue);
+    transition: 0.3s;
+}
+.self-assessment-questions .scroll-bg .submit:hover{
+    border: 1.2px solid white;
+    background-color: var(--darkblue);
+    color: var(--white);
+}
+
+.self-assessment-questions .scroll-object .question{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+.scroll-object .english{
+    margin-top: 5px;
+    font-style: italic;
+    font-size: 14px;
+}
+.scroll-object .form{
+    margin-top: 15px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+}
+.assessment-questions .shape{
+    margin-top: 10px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--darkblue);
+    border-radius: 5px;
+    opacity: 0.5;
+}
+.assessment-questions form:hover{
+    color: var(--darkblue);
+}
+
+/* Mobile Display */
+@media screen and (max-width: 1200px) and (min-width: 312px) {
+    .nav-wrapper .menu-wrapper .menu{
+        display: none;
+    }
+
+    .responsive-bar{
+        z-index: 2;
+        display: none;
+        position: fixed;
+        bottom: 0;
+        flex-direction: column;
+        background-color: #002334;
+        width: 100%;
+        height: 500px;
+        border-radius: 40px 40px 0 0;
+    }
+    .responsive-subbar{
+        padding: 10px;
+        color: var(--white);
+        width: fit-content;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        border-radius: 15px;
+        /* background-color: var(--white); */
+        transition: 0.3s;
+    }
+    .responsive-subbar:hover{
+        background-color: #80919A;
+        border-radius: 15px;
+    }
+    .responsive-bar .line{
+        border-radius: 0.5px;
+        width: 70%;
+        height: 1px;
+        background-color: var(--white);   
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .responsive-bar img{
+        position: fixed;
+        right: 0;
+        bottom: 0;
+    }
+        #hamburger-button{
+        cursor: pointer;
+        width: 30px;
+        display: grid;
+        grid-template-columns: auto;
+        row-gap: 6px;
+    }
+    #hamburger-button div{
+        background-color: #004567;
+        width: 25px;
+        height: 2.5px;
+        border-radius: 10px;
+    }
+    #cross-button{
+        cursor: pointer;
+        width: 30px;
+        display: none;
+        /* margin: auto; */
+    }
+    #cross-button .satu{
+        background-color: #004567;
+        width: 40px;
+        height: 2.5px;
+        border-radius: 10px;
+        transform: rotate(45deg);
+    }
+    #cross-button .dua{
+        background-color: #004567;
+        width: 40px;
+        height: 2.5px;
+        border-radius: 10px;
+        transform: rotate(-45deg);
+    }
+
+    .contents{
+        display: block;
+        justify-content: baseline;
+    }
+    .self-assessment-form{
+        transform: scale(0.95);
+        margin: auto;
+        margin-bottom: 30px;
+    }
+    .self-assessment-questions{
+        width: 95%;
+        margin-bottom: 30px;
+        /* background-color: red; */
+    }
+    .self-assessment-questions .scroll-bg{
+        width: 100%;
+        margin: auto;
+    }
+    .self-assessment-questions .scroll-div{
+        width: 90%;
+        padding: 5px;
+        border-radius: 30px;
+    }
+
+    .contents{
+        padding: 0;
+    }
+
+}
